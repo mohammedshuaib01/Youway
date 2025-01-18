@@ -13,6 +13,6 @@ urlpatterns = [
     path("checkout/",views.CheckOutView.as_view(), name="checkout"),
     path("orders/all/",views.MyOrderView.as_view(),name="orders"),
     path('verify/',views.PaymentVerificationView.as_view(),name="verification"),
-    path('category/<str:category_name>',views.CategoryListView.as_view(),name="category-list")
+    path('category/<str:category_name>',views.CategoryListView.as_view(),name="category-list"),
     
 ]
