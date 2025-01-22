@@ -64,7 +64,7 @@ class CategoryListView(View):
         category_name=kwargs.get("category_name")
         category = Category.objects.get(name=category_name) # Get the category by its name
         products = Product.objects.filter(category_object=category)  # Filter products by the category object
-        return render(request,"category_list.html",{"data": products})
+        return render(request,"category_list.html",{"data": products, "category_title":category})
 
 
 class AddTOcartview(View):
